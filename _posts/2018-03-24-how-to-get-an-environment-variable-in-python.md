@@ -1,7 +1,7 @@
 ---
 title: "Reading Environment Variables in Python"
 date: 2018-03-24 11:51:50 +0000
-modified: 2026-04-12 16:07:38 +0000
+modified: 2026-11-16 10:56:17 +0000
 author: "Q A"
 layout: post
 categories: [programming-languages]
@@ -55,6 +55,18 @@ api_key = os.getenv('API_KEY')
 ```
 
 Install it with `pip install python-dotenv`. This is useful for local development but production deployments should source variables directly from your orchestration platform (Kubernetes, systemd, Docker, etc.).
+
+## File Paths from Environment Variables
+
+For file paths, combine environment variables with `pathlib`:
+
+``` python
+from pathlib import Path
+import os
+
+config_dir = Path(os.environ.get('CONFIG_DIR', '/etc/myapp'))
+log_file = config_dir / 'app.log'
+```
 
 ## Using Pydantic for Configuration
 

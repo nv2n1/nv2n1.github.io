@@ -9,7 +9,7 @@ permalink: /category/programming-languages/
 
 Part of [Programming Academy](/programming-academy/).
 
-244 posts.
+243 posts.
 
 {% assign posts = site.categories[page.category] | sort: date | reverse %}
 <ul class="posts">
